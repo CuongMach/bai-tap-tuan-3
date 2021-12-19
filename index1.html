@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra và hiển thị số trong mảng</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập số cần tìm"))
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let index = -1
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === number) {
+            index = i;
+            break;
+        }
+    }
+    if (index !== -1) {
+        alert("Vị trí số cần tìm là " + index);
+    } else {
+        alert("Không tìm thấy số trong mảng")
+    }
+</script>
+</body>
+</html>
