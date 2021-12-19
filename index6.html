@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các phần tử của 1 cột và hiển thị tổng của từng cột</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [1,3,5,7,9],
+        [2,4,6,8,10],
+        [12,21,13,31,14,41]
+    ];
+    let sum;
+    let row;
+    for (let i = 0; i < arr.length; i++) {
+        row = arr[0].length;
+        if (arr[i].length > row) {
+            row = arr[i].length;
+        }
+    }
+    for (let j = 0; j < row; j++) {
+        sum = 0;
+        for (let k = 0; k < arr.length; k++) {
+            if (arr[k][j] === undefined){
+                arr[k][j] = 0;
+            }
+            sum += arr[k][j];
+        }
+        document.write("Tổng của các phần tử ở cột thứ " + j + " là " + sum + "<br>");
+    }
+</script>
+</body>
+</html>
